@@ -21,4 +21,6 @@ def submit():
 def show(id):
     return render_template("show.html", id=id)
 
-app.run(debug=True)
+import os
+port = int(os.environ.get("PORT", 5000))
+app.run(host="0.0.0.0", port=5000)
