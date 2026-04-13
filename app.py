@@ -1,27 +1,25 @@
 from flask import Flask, render_template, request
-import requests
-import os
 
 app = Flask(__name__)
 
+# Home page
 @app.route('/')
 def index():
     return render_template("index.html")
 
+# Quote form page
 @app.route('/quote')
 def quote():
     return render_template("quote.html")
 
+# Form submit
 @app.route('/submit', methods=['POST'])
 def submit():
-    name = request.form['name']
-    budget = request.form['budget']
+    name = request.form.get('name')
+    budget = request.form.get('budget')
     return f"Hello {name}, your budget is {budget}"
 
+# Show images page
 @app.route('/show/<int:id>')
 def show(id):
     return render_template("show.html", id=id)
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
