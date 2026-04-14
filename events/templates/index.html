@@ -1,211 +1,190 @@
-<!DOCTYPE html>
+*<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <!-- ✅ Correct viewport meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta type="viewport" content="width=width-device , initital-scale=1.0">
     <title>Events By Divya Reddy</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            margin-top: 90px;
-        }
+.hero {
+    height: 600px;
+    background: 
+        linear-gradient(to top, rgba(252, 253, 253, 0.158) 10%, rgba(3, 0, 0, 0.904)),
+        url("{{ url_for('static', filename='images/hall.jpg') }}");
+    background-size: cover;
+    background-position: center top;
+ 
+}
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    margin-top: 90px; }
 
-        .hero {
-            height: 600px;
-            background: 
-                linear-gradient(to top, rgba(252, 253, 253, 0.158) 10%, rgba(3, 0, 0, 0.904)),
-                url("{{ url_for('static', filename='images/hall.jpg') }}");
-            background-size: cover;
-            background-position: center top;
-        }
+.logo{font-size: xx-large;
+font-family:Georgia, 'Times New Roman', Times, serif;}
 
-        .logo {
-            font-size: xx-large;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
 
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 4px 7px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            box-sizing: border-box;
-            z-index: 1000;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        .left h1 {
-            margin: 0;
-            font-size: 22px;
-        }
+    padding: 4px 7px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    z-index: 1000;}
+.left h1 {
+    margin: 0;
+    font-size: 22px;}
 
-        .left h2 {
-            margin: 0;
-            font-size: 14px;
-            color: gray;
-        }
-
-        .get {
-            padding: 8px 15px;
-            background-color: rgb(214, 83, 123);
-            color: white;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .line {
-            font: larger;
-            font-family:'Times New Roman', Times, serif;
-            font-weight: bold;
-            color: aliceblue;
-            padding-top: 20vh;
-            margin: 0;
-            padding: 20px 0;
-            width: 100%;
-            text-align: center;
-        }
-
-        .line2 {
-            font-family: 'Times New Roman', Times, serif;
-            background: 
-                linear-gradient(to top, rgba(250, 252, 252, 0.308) 40%, rgba(109, 106, 106, 0.76));
-            background-size: cover;
-            background-position: center top;
-            margin-top: -0.5px; 
-            text-size-adjust: initial;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .image-button {
-            display: inline-block;
-            text-align: center;
-            cursor: pointer;
-            margin: 10px;
-        }
-
-        .image-button img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            display: block;
-        }
-
-        .hidden-images {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .hidden-images img {
-            width: 120px;
-            margin: 5px;
-        }
-
-        .insta, .fb {
-            margin: 20px auto;
-            display: block;
-        }
-
-        .contact {
-            margin-top: 20px;
-            text-align: center;
-            font-family: 'Times New Roman';
-            font-weight: bold;
-        }
-
-        .detail {
-            background-color: rgb(202, 210, 216);
-            padding: 20px;
-        }
-
-        /* ✅ Responsive adjustments */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero {
-                height: auto;
-                padding: 40px 20px;
-            }
-            .line {
-                font-size: 18px;
-                padding-top: 10vh;
-            }
-            .image-button {
-                width: 100%;
-                max-width: 350px;
-                margin: 10px auto;
-            }
-        }
+.left h2 {
+    margin: 0;
+    font-size: 14px;
+    color: gray;}
+.get {
+    padding: 8px 15px;
+    background-color: rgb(214, 83, 123);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;}
+.line{font: larger;
+    font-family:'Times New Roman', Times, serif ;
+    font-weight: bold;
+    color: aliceblue;
+    padding-top: 20vh;
+    margin: 0;
+    padding: 20px 0;
+    width: 100%;
+}
+.line2{font-family: 'Times New Roman', Times, serif;
+background: 
+        linear-gradient(to top, rgba(250, 252, 252, 0.308) 40%, rgba(109, 106, 106, 0.76));
+    background-size: cover;
+    background-position: center top;
+    margin-top: -0.5px; 
+    text-size-adjust: initial;
+}
+.image-button {
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+      margin: 10px;
+    }
+    .image-button img {
+      width: 150px;
+      height: auto;
+      display: block;
+    }
+    .hidden-images {
+      display: none;
+      margin-top: 10px;
+    }
+    .hidden-images img {
+      width: 120px;
+      margin: 5px;
+    }
+    .insta{ margin-top: 70px;
+        margin-left: 500px;
+    }
+    .fb{
+        margin-top:70px;
+        margin-left: 10px;
+    }
+    .contact{margin-top: 45px;
+        margin-left: 20px;
+        font-family: 'Times New Roman';
+        font-weight: bold;
+    }
+    .detail{background-color: rgb(202, 210, 216);}
     </style>
 </head>
 <body>
 <section class="hero">
-    <div class="header">
-        <h1 class="logo"> Events By Divya Reddy </h1>
-        <p> Events In Hyderabad</p>
-        <a href="/quote">
-            <div class="box">
-                <button class="get">get free quote</button>
-            </div>
-        </a>
+<div class="header">
+<h1 class="logo"> Events By Divya Reddy </h1>
+<p> Events In Hyderabad</p>
+<a href="/quote">
+    <div class="box">
+    <button class="get">
+        get free quote
+    </button>
+    
     </div>
-    <h2 class="line">Our event managers work with you,<br>keeping in mind your requirements and budget.</h2>
+</a>
+</div>
+<h2 class="line">Our event managers work with you,<br>keeping in mind your requirements and budget.</h2>
 </section>
-
 <section class="section1">
     <h2 class="line2">Experts in mandap creation and decoration
-        <br>We are never tired when we hired!
-        <br>No more worries when planner can hire
+        <br>
+        We are never tired when we hired!
+        <br>
+        No more worries when planner can hire
     </h2>
 </section>
-
 <section>
-    <h2 style="font-family: 'Times New Roman'; text-align:center;">Check For More 👇</h2>
+    <h2 style="font-family: 'Times New Roman';">Check For More 👇</h2>
 
-    <!-- Example button -->
-    <a href="/show/1">
-        <button class="image-button">
-            <img src="{{url_for('static' ,filename='images/button1.jpg')}}" alt="button1">
-            <p style="font-family: 'Times New Roman'; color: #fff; background-color: rgba(211, 72, 176, 0.918);">Wedding Mandapa</p>
-        </button>
-    </a>
-    <!-- Repeat for other buttons -->
+   <a href="/show/1">
+  <button class="image-button" onclick="show()">
+    <img src="{{url_for('static' ,filename='images/button1.jpg')}}" alt="button1" style="height: 35vh;">
+    <p style="font-family: 'Times New Roman'; color: rgb(248, 245, 247); background-color: rgba(211, 72, 176, 0.918);">Wedding Mandapa</p>
+  </button>
+</a>
+<a href="/show/2">
+  <button class="image-button" onclick="show()">
+    <img src="{{url_for('static' ,filename='images/button2.jpg')}}" alt="button2" style="height: 35vh;" >
+    <p style="font-family: 'Times New Roman'; color: rgb(248, 245, 247); background-color: rgba(211, 72, 176, 0.918);">Haldi Decor</p>
+  </button>
+  </a>
+  <a href="/show/3">
+  <button class="image-button" onclick="show()">
+    <img src="{{url_for('static' ,filename='images/button4.jpg')}}" alt="button4" style="height: 35vh;" >
+    <p style="font-family: 'Times New Roman'; color: rgb(248, 245, 247); background-color: rgba(211, 72, 176, 0.918);">Engagment</p>
+  </button>
+  </a>
+<a href="/show/4">
+  <button class="image-button" onclick="show()">
+    <img src="{{url_for('static' ,filename='images/button3.jpg')}}" alt="button3" style="height: 35vh;">
+    <p style="font-family: 'Times New Roman'; color: rgb(248, 245, 247); background-color: rgba(211, 72, 176, 0.918);">Recepetion</p>
+  </button>
+</a>
 </section>
-
 <section class="detail">
-    <p class="contact">
-        CONTACT US<br><br>
-        Call @ +91-8341868045<br>
-        Write to us: eventsbydivyareddy@gmail.com<br>
-        WhatsApp: +91 9030276160<br>
-        10 AM - 7 PM<br>
-        Contact Us
-    </p>
-    <a href="https://www.instagram.com/eventsbydivyareddy?igsh=MWs1ZmNudzU3bHJ5Zg==">
-        <button class="insta">
-            <img src="{{url_for('static' ,filename='images/insta.jpg')}}" alt="insta" style="height:50px; width: 50px;">
-        </button>
-    </a>
-    <a href="https://www.facebook.com/share/1Co52fV5Se/">
-        <button class="fb">
-            <img src="{{url_for('static' ,filename='images/fb.jpg')}}" alt="fb" style="height:50px; width: 50px;">
-        </button>
-    </a>
+    <p class="contact"><br>CONTACT US<br><br>
+Call @ +91-8341868045
+<br>
+Write to us:eventsbydivyareddy@gmail.com
+<br>
+WhatsApp: +91 9030276160
+<br>
+10 AM - 7 PM
+<br>
+Contact Us</p>
+<a href="https://www.instagram.com/eventsbydivyareddy?igsh=MWs1ZmNudzU3bHJ5Zg==">
+    <button class="insta">
+        <img src="{{url_for('static' ,filename='images/insta.jpg')}}" alt="insta" style="height:50px; width: 50px;" >
+    </button>
+</a>
+<a href="https://www.facebook.com/share/1Co52fV5Se/">
+    <button class="fb">
+        <img src="{{url_for('static' ,filename='images/fb.jpg')}}" alt="fb" style="height:50px; width: 50px; " >
+    </button>
+</a>
+<br>
 </section>
-
-<footer>
-    <p style="text-align: center; margin-top:10px; font-weight: lighter;">© 2026 Divyareddy_Events.com </p>
-</footer>
+  
 </body>
 </html>
+<footer>
+    <p style="text-align: center;" style="margin-top:10px; font-weight: lighter;">© 2026 Divyareddy_Events.com </p>
+    
+</footer>
+</body>
+</html>*
